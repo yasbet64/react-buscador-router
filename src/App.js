@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import imagen from "./paz.jpg"
+import React from 'react';
+import SongSearch from './components/SongSearch';
+//import { Paper } from "@material-ui/core/Paper";
 
-function App() {
+const styles = {
+  paperContainer: {
+    display: "flex",
+    justifyContent: "center",
+    backgroundImage: `url(${imagen})`,
+    with:"100%",
+    minHeight: '100vh',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    
+  },
+
+  im:{
+    marginBottom:"50px"
+  }
+};
+
+const App=()=> {
+  //const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={styles.paperContainer} >
+      <section style={styles.im}>
+      <SongSearch/>  
+      </section>    
     </div>
   );
 }
